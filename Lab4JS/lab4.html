@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2 id="header"></h2>
+        <p id="demo"></p>
+        
+        <script>
+            squarer()
+            function squarer() {
+                var num = prompt("Enter an Integer", "0");
+                document.getElementById("header").innerHTML = "You chose the number " + num;
+                if (num != null)
+                {
+                    var theString = "";
+                    var line = "";
+                    var i;
+                    for ( i = 1; i < parseInt(num) + 1; i++)
+                    {
+
+                        theString.concat(i + "  " + i*i + "   " + i*i*i);
+                        line = (i + "  " + i*i + "   " + i*i*i).toString();
+                        theString += line + "</br>";
+                        
+                    }
+                    document.getElementById("demo").innerHTML = theString;
+                }
+            }
+            </script>
+    </body>
+</html>
