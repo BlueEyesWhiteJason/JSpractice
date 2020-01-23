@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <form >
+            Please enter number of sides for you Die: <br/>
+            <input id="sides" type="number">
+            <input type="submit" onclick="roll(document.getElementById('sides').value); return false;">
+        </form> 
+        <br/>
+        <p id="result"></p>
+    </body>
+    <script type="text/javascript">
+        // var sides = document.write(document.getElementById("sides"));
+        var num;
+        function roll(sides) {
+            num = Math.floor(Math.random() * sides) + 1;
+            document.getElementById("result").innerHTML = "You rolled a " + num;
+        }
+    </script>
+</html>
