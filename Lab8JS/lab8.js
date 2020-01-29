@@ -1,11 +1,32 @@
 class Student{
-    constructor(name, hometown, food){
+    constructor(id, name, hometown, food){
+
+        this.Id = id;
         this.Name = name;
         this.Hometown = hometown;
         this.Food = food;
     }
 }
+var sList = new Array();
 
-s1 = new Student("Jerry", "Holland", "Ants");
-s2 = new Student("Anna", "Midland", "Pasghetti");
+sList.push(new Student(1,"Jerry", "Holland", "Ants"));
+sList.push(new Student(2, "Anna", "Midland", "Sketty"));
+sList.push(new Student(3, "Jason", "Holland", "Nuts"));
+
+// s1 = new Student("Jerry", "Holland", "Ants");
+// s2 = new Student("Anna", "Midland", "Pasghetti");
+// s3 = new Student("Jason", "Holland", "Blood of my Enemies");
+
+function DisplayStudent(num) {
+
+    for (var i = 0; i < sList.length(); i++)
+    {
+        if(num === slist[i].Id)
+        {
+            document.getElementById("result").innerHTML = "This student's name is ${sList[i].Name}, they are from ${sList[i].Hometown} <br/> and their favorite food is ${sList[i].Food}. ";
+
+        }
+    }
+}
+
 
