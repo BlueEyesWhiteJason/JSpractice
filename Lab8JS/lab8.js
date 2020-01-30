@@ -17,16 +17,18 @@ sList.push(new Student(3, "Jason", "Holland", "Nuts"));
 // s2 = new Student("Anna", "Midland", "Pasghetti");
 // s3 = new Student("Jason", "Holland", "Blood of my Enemies");
 
-function DisplayStudent(num) {
-
+function DisplayStudent() {
+    console.log("Please enter number 1-3 to learn about student");
+    var num = readline();
     for (var i = 0; i < sList.length(); i++)
     {
         if(num === slist[i].Id)
         {
-            document.getElementById("result").innerHTML = "This student's name is ${sList[i].Name}, they are from ${sList[i].Hometown} <br/> and their favorite food is ${sList[i].Food}. ";
-
+            //document.getElementById("result").innerHTML = "This student's name is ${sList[i].Name}, they are from ${sList[i].Hometown} <br/> and their favorite food is ${sList[i].Food}. ";
+            console.log("This student's name is ${sList[i].Name}, they are from ${sList[i].Hometown} <br/> and their favorite food is ${sList[i].Food}. ");
         }
     }
 }
 
+DisplayStudent();
 
